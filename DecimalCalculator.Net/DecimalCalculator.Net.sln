@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalCalculator.Net", "DecimalCalculator.Net\DecimalCalculator.Net.csproj", "{5D7E2FCF-A594-438B-BD7C-155D39A5AAAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalCalculator.Test", "DecimalCalculator.Test\DecimalCalculator.Test.csproj", "{D784C3E1-7E61-47E5-9C72-EBB0F57B46FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D7E2FCF-A594-438B-BD7C-155D39A5AAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7E2FCF-A594-438B-BD7C-155D39A5AAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7E2FCF-A594-438B-BD7C-155D39A5AAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7E2FCF-A594-438B-BD7C-155D39A5AAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D784C3E1-7E61-47E5-9C72-EBB0F57B46FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D784C3E1-7E61-47E5-9C72-EBB0F57B46FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D784C3E1-7E61-47E5-9C72-EBB0F57B46FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D784C3E1-7E61-47E5-9C72-EBB0F57B46FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C6CB4C1-70C9-46E2-9622-8356B5994991}
+	EndGlobalSection
+EndGlobal
