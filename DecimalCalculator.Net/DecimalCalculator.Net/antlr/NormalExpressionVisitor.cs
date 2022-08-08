@@ -47,15 +47,27 @@ namespace DecimalCalculator.Net.antlr
         public Expression VisitConstant([NotNull] calculatorParser.ConstantContext ctx)
         {
             var txt = ctx.GetText();
+            Expression constExp = Expression.Empty();
             if (txt == "pi")
             {
-                return Expression.Constant((decimal)Math.PI);
+                constExp = Expression.Constant((decimal)Math.PI);
             }
             else if (txt == "e")
             {
-                return Expression.Constant((decimal)Math.E);
+                constExp = Expression.Constant((decimal)Math.E);
             }
-            return Expression.Empty();
+
+            var m = typeof(IDictionary<string, decimal>).GetMethod("ContainsKey", new[] { typeof(string) });
+            var me = Expression.Call(_arg, m, Expression.Constant(txt));
+            var result = Expression.Variable(typeof(decimal));
+            return Expression.Block(
+                new[] { result },
+                Expression.IfThenElse(me,
+                    Expression.Assign(result, Expression.Property(_arg, "Item", Expression.Constant(txt))),
+                    Expression.Assign(result, constExp)
+                ),
+                result
+            );
         }
 
         public Expression VisitExpression([NotNull] calculatorParser.ExpressionContext ctx)

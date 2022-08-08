@@ -67,7 +67,7 @@ public class DecimalCalculatorTest
     {
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
-        string formula = "(a+b+c+d+ee+f+g)*h*i*floor(j*m)/k/l";
+        string formula = "(a+b+c+d+e+f+g)*h*i*floor(j*m)/k/l";
         var exp = DecimalCalculator.NET.DecimalCalculator.GetExpression(formula);
         for (int i = 0; i < 10000; ++i)
         {
@@ -77,7 +77,7 @@ public class DecimalCalculatorTest
                 { "b", 348.1M },
                 { "c", 33M },
                 { "d", 12M },
-                { "ee", 1M },
+                { "e", 1M },
                 { "f", 47M },
                 { "g", 123.12M },
                 { "h", -25M },
